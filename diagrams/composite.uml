@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>edu.austral.ingsis.math.composite</OriginalElement>
+  <nodes>
+    <node x="-12.391452063590549" y="584.2539559140782">edu.austral.ingsis.math.composite.Operator</node>
+    <node x="-38.81186208503158" y="735.0685817155554">edu.austral.ingsis.math.composite.Printer</node>
+    <node x="43.34273399982271" y="-14.592505181040252">edu.austral.ingsis.math.composite.Function</node>
+    <node x="-58.16721446968489" y="266.7340247712547">edu.austral.ingsis.math.composite.Operation</node>
+    <node x="244.90961091396883" y="593.1931426959086">edu.austral.ingsis.math.composite.Resolver</node>
+    <node x="273.9509356556776" y="246.82916545841948">edu.austral.ingsis.math.composite.Variable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.austral.ingsis.math.composite.Variable" target="edu.austral.ingsis.math.composite.Function" relationship="REALIZATION">
+      <point x="6.434432242485855E-5" y="-142.50016545841947" />
+      <point x="407.4510000000001" y="216.99999999999994" />
+      <point x="176.84300000000005" y="216.99999999999994" />
+      <point x="2.660001773335807E-4" y="100.4995051810402" />
+    </edge>
+    <edge source="edu.austral.ingsis.math.composite.Operation" target="edu.austral.ingsis.math.composite.Function" relationship="TO_ONE">
+      <point x="-14.999785530315066" y="-128.5" />
+      <point x="-116.50973399982267" y="100.5" />
+    </edge>
+    <edge source="edu.austral.ingsis.math.composite.Operation" target="edu.austral.ingsis.math.composite.Operator" relationship="TO_ONE">
+      <point x="2.275762406094344" y="128.5" />
+      <point x="-0.0" y="-44.0" />
+    </edge>
+    <edge source="edu.austral.ingsis.math.composite.Operation" target="edu.austral.ingsis.math.composite.Function" relationship="REALIZATION">
+      <point x="2.1446968493421537E-4" y="-128.5000247712548" />
+      <point x="75.33300000000006" y="216.99999999999994" />
+      <point x="176.84300000000005" y="216.99999999999994" />
+      <point x="2.660001773335807E-4" y="100.4995051810402" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.4051222351571595" showDependencies="true" x="310.78127589063854" y="423.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

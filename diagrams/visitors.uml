@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>edu.austral.ingsis.math.visitors</OriginalElement>
+  <nodes>
+    <node x="-87.24650408793428" y="98.93994136678941">edu.austral.ingsis.math.visitors.CalculateVisitor</node>
+    <node x="453.39363941839486" y="104.48853387199256">edu.austral.ingsis.math.visitors.PrintVisitor</node>
+    <node x="183.19147799566878" y="-14.794676462711678">edu.austral.ingsis.math.visitors.Visitor</node>
+    <node x="183.12203638975512" y="162.20684159622175">edu.austral.ingsis.math.visitors.ListVariablesVisitor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.austral.ingsis.math.visitors.ListVariablesVisitor" target="edu.austral.ingsis.math.visitors.Visitor" relationship="REALIZATION">
+      <point x="-104.50003638975511" y="1.5840377824360985E-4" />
+      <point x="153.0" y="220.707" />
+      <point x="153.0" y="43.705" />
+      <point x="-104.50047799566877" y="-3.2353728832390516E-4" />
+    </edge>
+    <edge source="edu.austral.ingsis.math.visitors.CalculateVisitor" target="edu.austral.ingsis.math.visitors.Visitor" relationship="REALIZATION">
+      <point x="104.49950408793428" y="5.86332105854126E-5" />
+      <point x="153.0" y="171.44" />
+      <point x="153.0" y="43.705" />
+      <point x="-104.50047799566877" y="-3.2353728832390516E-4" />
+    </edge>
+    <edge source="edu.austral.ingsis.math.visitors.PrintVisitor" target="edu.austral.ingsis.math.visitors.Visitor" relationship="REALIZATION">
+      <point x="-104.49963941839485" y="-44.48853387199256" />
+      <point x="153.0" y="132.5" />
+      <point x="153.0" y="43.705" />
+      <point x="-104.50047799566877" y="-3.2353728832390516E-4" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="true" x="297.5" y="142.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
