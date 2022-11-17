@@ -1,16 +1,30 @@
 package edu.austral.ingsis.math.composite;
 
+import java.util.List;
+
 public class Variable implements Function{
     private final String name;
     private final double value;
+    private final boolean isVariable;
+    private final boolean isNumber;
 
     public Variable(String name, double value) {
         this.name = name;
         this.value = value;
+        this.isVariable = true;
+        this.isNumber = true;
     }
     public Variable(double value) {
         this.name = null;
         this.value = value;
+        this.isVariable = true;
+        this.isNumber = true;
+    }
+    public Variable(String name) {
+        this.name = name;
+        this.value = 0;
+        this.isVariable = true;
+        this.isNumber = false;
     }
 
     @Override
@@ -20,6 +34,24 @@ public class Variable implements Function{
 
     @Override
     public String print() {
-        return String.valueOf((int)this.value);
+        if (isNumber) return String.valueOf((int)this.value);
+        return name;
     }
+
+    @Override
+    public boolean isVariable() {
+        return isVariable;
+    }
+
+    @Override
+    public Operator getOperator() {
+        return null;
+    }
+
+    @Override
+    public List<String> getVariableList(List<String> list) {
+        if (!isNumber && !list.contains(name)) list.add(name);
+        return list;
+    }
+
 }

@@ -1,5 +1,8 @@
 package edu.austral.ingsis.math;
 
+import edu.austral.ingsis.math.composite.Operation;
+import edu.austral.ingsis.math.composite.Operator;
+import edu.austral.ingsis.math.composite.Variable;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -13,7 +16,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction1() {
-        final Double result = 7d;
+        final Double result = new Operation(new Variable(1), new Variable(6), Operator.SUM).calculate();
 
         assertThat(result, equalTo(7d));
     }
@@ -23,7 +26,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction2() {
-        final Double result = 6d;
+        final Double result = new Operation(new Variable(12), new Variable(2), Operator.DIVIDE).calculate();
 
         assertThat(result, equalTo(6d));
     }
@@ -33,7 +36,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction3() {
-        final Double result = 13.5;
+        final Double result = new Operation(new Operation(new Variable(9), new Variable(2), Operator.DIVIDE),new Variable(3),Operator.MULTIPLY).calculate();
 
         assertThat(result, equalTo(13.5d));
     }
@@ -43,7 +46,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction4() {
-        final Double result = 20.25;
+        final Double result = new Operation(new Operation(new Variable(27), new Variable(6), Operator.DIVIDE),new Variable(2),Operator.EXPONENT).calculate();
 
         assertThat(result, equalTo(20.25d));
     }
@@ -53,7 +56,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction5() {
-        final Double result = 6d;
+        final Double result = new Operation(new Variable(36),new Operation(new Variable(1), new Variable(2), Operator.DIVIDE),Operator.EXPONENT).calculate();
 
         assertThat(result, equalTo(6d));
     }
@@ -63,7 +66,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction6() {
-        final Double result = 136d;
+        final Double result = new Operation(new Variable(136), new Variable(0), Operator.ABSOLUTE).calculate();
 
         assertThat(result, equalTo(136d));
     }
@@ -73,7 +76,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction7() {
-        final Double result = 136d;
+        final Double result = new Operation(new Variable(-136), new Variable(0), Operator.ABSOLUTE).calculate();
 
         assertThat(result, equalTo(136d));
     }
@@ -83,7 +86,7 @@ public class ResolutionTest {
      */
     @Test
     public void shouldResolveSimpleFunction8() {
-        final Double result = 0d;
+        final Double result = new Operation(new Operation(new Variable(5), new Variable(5), Operator.SUBTRACT),new Variable(8),Operator.MULTIPLY).calculate();
 
         assertThat(result, equalTo(0d));
     }

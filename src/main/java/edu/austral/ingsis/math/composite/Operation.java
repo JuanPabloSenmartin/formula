@@ -1,5 +1,7 @@
 package edu.austral.ingsis.math.composite;
 
+import java.util.List;
+
 public class Operation implements Function{
     private final Function function1;
     private final Function function2;
@@ -20,5 +22,22 @@ public class Operation implements Function{
     @Override
     public String print() {
         return Printer.print(function1, function2, operator);
+    }
+
+    @Override
+    public boolean isVariable() {
+        return false;
+    }
+
+    @Override
+    public Operator getOperator() {
+        return operator;
+    }
+
+    @Override
+    public List<String> getVariableList(List<String> list) {
+        list = function1.getVariableList(list);
+        list = function2.getVariableList(list);
+        return list;
     }
 }
