@@ -1,5 +1,7 @@
 package edu.austral.ingsis.math.composite;
 
+import edu.austral.ingsis.math.visitors.Visitor;
+
 import java.util.List;
 
 public class Operation implements Function{
@@ -39,5 +41,18 @@ public class Operation implements Function{
         list = function1.getVariableList(list);
         list = function2.getVariableList(list);
         return list;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitOperation(this);
+    }
+
+    public Function getFunction1() {
+        return function1;
+    }
+
+    public Function getFunction2() {
+        return function2;
     }
 }

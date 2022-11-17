@@ -1,4 +1,4 @@
-package edu.austral.ingsis.math;
+package edu.austral.ingsis.math.compositeTest;
 
 import edu.austral.ingsis.math.composite.Operation;
 import edu.austral.ingsis.math.composite.Operator;
@@ -6,10 +6,8 @@ import edu.austral.ingsis.math.composite.Variable;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 

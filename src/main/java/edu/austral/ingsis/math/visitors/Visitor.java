@@ -7,4 +7,5 @@ public interface Visitor {
     void visitOperation(Operation operation);
     void visitVariable(Variable variable);
 
+    Object getResult();
 }

@@ -1,4 +1,4 @@
-package edu.austral.ingsis.math;
+package edu.austral.ingsis.math.compositeTest;
 
 import edu.austral.ingsis.math.composite.Operation;
 import edu.austral.ingsis.math.composite.Operator;

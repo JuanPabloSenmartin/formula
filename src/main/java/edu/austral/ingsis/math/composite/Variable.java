@@ -1,5 +1,7 @@
 package edu.austral.ingsis.math.composite;
 
+import edu.austral.ingsis.math.visitors.Visitor;
+
 import java.util.List;
 
 public class Variable implements Function{
@@ -43,6 +45,18 @@ public class Variable implements Function{
         return isVariable;
     }
 
+    public boolean isNumber() {
+        return isNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
     @Override
     public Operator getOperator() {
         return null;
@@ -52,6 +66,11 @@ public class Variable implements Function{
     public List<String> getVariableList(List<String> list) {
         if (!isNumber && !list.contains(name)) list.add(name);
         return list;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitVariable(this);
     }
 
 }

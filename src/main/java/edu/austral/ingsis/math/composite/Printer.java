@@ -41,4 +41,39 @@ public class Printer {
         }
         return str;
     }
+    public static String print(String s1, String s2, Operator op, Operator firstOperator, Operator secondOperator, boolean isFirstVariable, boolean isSecondVariable){
+        String str = "";
+        if ((!isFirstVariable) && firstOperator != Operator.ABSOLUTE && firstOperator != Operator.SQRT){
+            s1 = "(" + s1 + ")";
+        }
+        if ((!isSecondVariable) && secondOperator != Operator.ABSOLUTE && secondOperator != Operator.SQRT){
+            s2 = "(" + s2 + ")";
+        }
+        switch (op){
+            case SUM:
+                str += s1 + " + " + s2;
+                break;
+            case SUBTRACT:
+                str += s1 + " - " + s2;
+                break;
+            case MULTIPLY:
+                str += s1 + " * " + s2;
+                break;
+            case DIVIDE:
+                str += s1 + " / " + s2;
+                break;
+            case EXPONENT:
+                str += s1 + " ^ " + s2;
+                break;
+            case SQRT:
+                str += "sqrt(" + s1 + ")";
+                break;
+            case ABSOLUTE:
+                str += "|" + s1 + "|";
+                break;
+            default:
+                throw new UnsupportedOperationException("Invalid operation!");
+        }
+        return str;
+    }
 }
